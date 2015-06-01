@@ -1,0 +1,12 @@
+body {
+  background-image: url(http://blog.susquehanna.net/wp-content/uploads/2012/11/making-a-list.jpg);
+  background-size: cover;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+div.panel-body {
+  padding-top: 0px;
+}

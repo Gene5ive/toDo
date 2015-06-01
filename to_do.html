@@ -10,29 +10,39 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="jumbotron">
+      <div class="jumboguts">
 
-      <h1><strong>To Do</strong></h1>
+        <h1><strong>To Do</strong></h1>
 
-      <form id="add-task">
-        <div class="form-group">
-          <label for="new-task">Enter a new task:</label>
-          <input id="new-task" type="text" class="form-control">
+        <form id="add-task">
+          <div class="form-group">
+            <label for="new-task">Enter a new task:</label>
+            <input id="new-task" type="text" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+        <br>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Pending Tasks:</h3>
+            <ul id="pending-tasks">
+
+            </ul>
+
+            <button id="mark-complete" class="btn btn-primary">Mark as Complete</button>
+
+            <h3>Completed Tasks:</h3>
+            <ul id="completed-tasks">
+
+            </ul>
+          </div>
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </form>
 
-      <h3>Pending Tasks:</h3>
-      <ul id="pending-tasks">
 
-      </ul>
-
-      <button id="mark-complete" class="btn btn-primary">Mark as Complete</button>
-
-      <h3>Completed Tasks:</h3>
-      <ul id="completed-tasks">
-
-      </ul>
+      </div>
 
     </div>
   </body>

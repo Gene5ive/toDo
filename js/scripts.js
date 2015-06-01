@@ -23,7 +23,7 @@ $(document).ready(function() {
     $("ul").empty();
     for(i = 0; i < allTasks.length; i++) {
       if(allTasks[i].isComplete) {
-        $("ul#completed-tasks").append("<li>" + allTasks[i].name + "</li>");
+        $("ul#completed-tasks").append("<li>" + allTasks[i].name + ' <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>' + "</li>");
       } else {
         $("ul#pending-tasks").append("<li>" + allTasks[i].name + ' <input class="complete-box" id="' + i + '" type="checkbox">' + "</li>");
       }
