@@ -11,16 +11,21 @@ $(document).ready(function() {
   });
 
   $("button#mark-complete").click(function() {
-
+    $(".complete-box").each(function() {
+      if(this.checked) {
+        allTasks[this.id].isComplete = true;
+      }
+      drawTasks();
+    });
   });
 
   var drawTasks = function() {
     $("ul").empty();
     for(i = 0; i < allTasks.length; i++) {
       if(allTasks[i].isComplete) {
-        $("ul#completed-tasks").append("<li>" + allTasks[i].name + ' <input id="' + allTasks[i].name + '" type="checkbox">' + "</li>");
+        $("ul#completed-tasks").append("<li>" + allTasks[i].name + "</li>");
       } else {
-        $("ul#pending-tasks").append("<li>" + allTasks[i].name + ' <input id="' + allTasks[i].name + '" type="checkbox">' + "</li>");
+        $("ul#pending-tasks").append("<li>" + allTasks[i].name + ' <input class="complete-box" id="' + i + '" type="checkbox">' + "</li>");
       }
     }
   };
